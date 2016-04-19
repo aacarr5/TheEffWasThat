@@ -1,3 +1,10 @@
+.indexBackground {
+	height: 100%;
+	width: 100%;
+	background-image: image-url('orange-office.jpg');
+	background-size: cover;
+}
+
 .main {
 	@include span-columns(6);
 	@include shift(3);
@@ -5,7 +12,9 @@
 	background: $blue;
 	overflow: scroll;
 	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-bottom: 12px;
+	margin-top:20px;
+	color: $white;
 	@include media(max-width 480px) {
 		h1 {
 			font-size: 14px;
@@ -28,4 +37,29 @@
 
 .introText {
 	font-size: 18px
+}
+
+.welcomeOverlay {
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.welcomeModal {
+	position:absolute;
+    background:url(tint20.png) 0 0 repeat;
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+}
+
+.welcomeModalContent {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
 }
