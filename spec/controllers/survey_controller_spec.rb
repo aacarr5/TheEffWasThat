@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe HomepageController, type: :controller do
+RSpec.describe SurveyController, type: :controller do
 	describe 'GET index' do 
 		it 'has a 200 status' do 
 			get :index
-			expect(response.status).to eq(200)
+			expect(response.status).to eq 200
 		end
 	end
 end
