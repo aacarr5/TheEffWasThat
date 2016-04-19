@@ -14,8 +14,17 @@
 			font-size: 12px;
 		}
 	}
+	border-radius:10px;
+	border: 5px solid $black;
 }
 
+.surveyButton {
+	@include span-columns(6);
+	@include shift(3);
+	text-align:center;
+	font-size: 30px;
+	padding-top:5%;
+}
 
 .introText {
 	font-size: 18px
