@@ -3,6 +3,7 @@
 	width: 100%;
 	background-image: image-url('orange-office.jpg');
 	background-size: cover;
+	@include filter(grayscale(0%) blur(0px))
 }
 
 .main {
@@ -25,6 +26,9 @@
 	}
 	border-radius:10px;
 	border: 5px solid $black;
+	.heroText{
+		font-style: italic;
+	}
 }
 
 .surveyButton {
@@ -36,7 +40,7 @@
 }
 
 .introText {
-	font-size: 18px
+	font-size: 18px;
 }
 
 .welcomeOverlay {

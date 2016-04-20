@@ -6,7 +6,11 @@ RSpec.describe Survey, type: :model do
 
   describe 'initialization' do
   	it 'should have stuff' do
-  		expect(survey.name).to be_a String 
+  		expect(survey.zipcode).to be_a String 
+  		expect(survey.gender).to be_a String
+  		expect(survey.race).to be_a String
+  		expect(survey.age).to be_a Integer
+  		expect(survey.email).to be_a String
   	end 
   end
 end
