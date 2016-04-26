@@ -1,27 +1,27 @@
-<h1>Thanks for Filling Out This Form!</h1>
+<h1 class="surveyHeader">Thanks for Filling Out This Form!</h1>
 
 <%= form_for @survey do |f| %>
 	
-	<%= f.label :zipcode %>
+	<%= f.label :zipcode, "Zipcode" %>
 	<%= f.text_field :zipcode %>
 
-	<%= f.label  :gender %>	
-	<%= f.text_field :gender %>
+	<%= f.label  :gender, "Gender" %>	
+	<%= select("survey","gender", Survey::GENDERS, {include_blank:true}) %>
 
-	<%= f.label :race %>	
-	<%= f.text_field :race %>
+	<%= f.label :race, "Race" %>	
+	<%= select("survey", "race", Survey::RACES, {include_blank:true}) %>
 
-	<%= f.label :age %>	
+	<%= f.label :age, "Age"%>	
 	<%= f.text_field :age %>
 
-	<%= f.label :email %>	
+	<%= f.label :email, "Email" %>	
 	<%= f.text_field :email %>
 
-	<%= f.label :faced_microaggressions %>	
-	<%= f.text_field :faced_microaggressions %>
+	<%= f.label :faced_microaggressions, "Faced Microaggressions?" %>	
+	<%= select("survey","faced_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
-	<%= f.label :seen_microaggressions %>
-	<%= f.text_field :seen_microaggressions %>
+	<%= f.label :seen_microaggressions, "Seen Microaggressions?" %>
+	<%= select("survey","seen_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
 	<%= f.submit "Submit" %>
 <% end %>
