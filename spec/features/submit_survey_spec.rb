@@ -10,6 +10,7 @@ describe 'the finding survey process', :type => :feature do
 		fill_in('Email', :with => 'aacarr5@gmail.com')
 		select('Yes', :from => 'Faced Microaggressions')
 		select('No', :from => 'Seen Microaggressions')
+		select('Finance', :from => "Industry")
 		click_button 'Submit'
 
 		expect(page).to have_content 'Thanks'

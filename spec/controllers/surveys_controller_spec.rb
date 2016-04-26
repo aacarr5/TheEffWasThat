@@ -20,6 +20,7 @@ RSpec.describe SurveysController, type: :controller do
 				email:nil,
 				faced_microagressions:"yes",
 				seen_microaggressions:"no",
+				industry:'Finance'
 			}
 			post :create, survey: survey
 			expect(Survey.count - old_count).to eq(1)

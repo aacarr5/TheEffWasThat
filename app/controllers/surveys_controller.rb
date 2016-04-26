@@ -14,6 +14,6 @@ class SurveysController < ApplicationController
 
 	private
 		def survey_params
-			params.require(:survey).permit(:zipcode,:gender,:race,:age,:email,:faced_micoragressions,:seen_microaggressions)
+			params.require(:survey).permit(:zipcode,:gender,:race,:industry,:age,:email,:faced_micoragressions,:seen_microaggressions)
 		end
 end

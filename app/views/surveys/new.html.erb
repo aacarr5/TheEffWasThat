@@ -12,6 +12,9 @@
 		<%= f.label :race, "Race" %>	
 		<%= select("survey", "race", Survey::RACES, {include_blank:true}) %>
 
+		<%= f.label :industry, "Industry" %>
+		<%= select("survey", "industry", Survey::INDUSTRIES, {include_blank:true})%>
+
 		<%= f.label :age, "Age"%>	
 		<%= f.text_field :age %>
 
