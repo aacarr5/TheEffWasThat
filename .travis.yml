@@ -1,7 +1,25 @@
 language: ruby
+
 rvm:
  - 2.0.0p643
  - jruby
  - rbx
 
-gemfile: 'GemFile'  
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
+
+gemfile: 
+  - Gemfile
+
+env: 
+  - DB = postgresql 
+
+install:
+  - bundle install
+
+script:
+  - rake db:drop
+  - rake db:create
+  - rake db:migrate
+
