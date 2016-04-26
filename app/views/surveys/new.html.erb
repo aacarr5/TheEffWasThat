@@ -1,0 +1,27 @@
+<h1>Thanks for Filling Out This Form!</h1>
+
+<%= form_for @survey do |f| %>
+	
+	<%= f.label :zipcode %>
+	<%= f.text_field :zipcode %>
+
+	<%= f.label  :gender %>	
+	<%= f.text_field :gender %>
+
+	<%= f.label :race %>	
+	<%= f.text_field :race %>
+
+	<%= f.label :age %>	
+	<%= f.text_field :age %>
+
+	<%= f.label :email %>	
+	<%= f.text_field :email %>
+
+	<%= f.label :faced_microaggressions %>	
+	<%= f.text_field :faced_microaggressions %>
+
+	<%= f.label :seen_microaggressions %>
+	<%= f.text_field :seen_microaggressions %>
+
+	<%= f.submit "Submit" %>
+<% end %>

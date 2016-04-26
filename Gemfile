@@ -32,6 +32,7 @@ gem 'bourbon'
 
 group :test do 
 	gem 'pry'
+	gem 'capybara'
 end
 
 

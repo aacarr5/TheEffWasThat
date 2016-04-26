@@ -3,7 +3,13 @@
 	width: 100%;
 	background-image: image-url('orange-office.jpg');
 	background-size: cover;
-	@include filter(grayscale(0%) blur(0px))
+	@include filter(grayscale(0%) blur(0px));
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:-1;
 }
 
 .main {
