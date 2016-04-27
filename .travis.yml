@@ -1,9 +1,21 @@
 language: ruby
+cache: bundler
+
+before_install: rm Gemfile.lock || true
+
+install: bundle install --without development
 
 rvm:
- - 2.0.0p643
- - jruby
+ - 2.1.0
+ - 2.2.0
+ - 2.3.0
  - rbx
+
+script: bundle exec rspec spec
+
+branches:
+  only:
+  - master
 
 env: 
  - DB="postgresql"
