@@ -8,7 +8,6 @@ RSpec.describe SurveysController, type: :controller do
 		end
 	end
 
-
 	describe 'POST' do
 		it 'can post surveys' do
 			old_count = Survey.count
@@ -26,7 +25,4 @@ RSpec.describe SurveysController, type: :controller do
 			expect(Survey.count - old_count).to eq(1)
 		end
 	end
-
-
-
 end
