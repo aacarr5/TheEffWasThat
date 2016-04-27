@@ -27,8 +27,6 @@ gem 'rspec-rails'
 gem 'bcrypt'
 
 
-gem 'rails_12factor'
-
 # BOURBON
 gem 'bourbon'
 
