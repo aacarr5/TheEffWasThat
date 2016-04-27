@@ -1,8 +1,9 @@
 language: ruby
+
 rvm:
  - 2.2
  - jruby
  - rbx
 
- env: 
+env: 
  - DB="postgresql"
