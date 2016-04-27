@@ -13,10 +13,12 @@ rvm:
  - 2.3.0
  - rbx
 
+before_script:
+ - bundle exec rake db:drop 
+ - bundle exec rake db:create
+ - bundle exec rake db:migrate
+
 script: 
- - be rake db:drop 
- - be rake db:create
- - be rake db:migrate
  - bundle exec rspec spec
 
 branches:
