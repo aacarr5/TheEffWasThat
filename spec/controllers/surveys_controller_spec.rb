@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SurveysController, type: :controller do
-	describe 'GET index' do 
+	describe 'GET new survey' do 
 		it 'has a 200 status' do 
 			get :new
 			expect(response.status).to eq 200
@@ -26,5 +26,7 @@ RSpec.describe SurveysController, type: :controller do
 			expect(Survey.count - old_count).to eq(1)
 		end
 	end
+
+
 
 end
