@@ -1,7 +1,7 @@
 <h1 class="surveyHeader">Thanks for Filling Out This Form!</h1>
 
 <% if @survey.errors.any? %>
-	<h1>Hm..something went wrong</h1>
+	<h1 class="error">Hm..something went wrong</h1>
 <% end %>
 
 <div class="survey">
@@ -31,6 +31,6 @@
 		<%= f.label :seen_microaggressions, "Seen Microaggressions?" %>
 		<%= select("survey","seen_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
-		<%= f.submit "Submit" %>
+		<%= f.submit "Submit", class: "submitSurvey" %>
 	<% end %>
 </div>
