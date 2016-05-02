@@ -17,8 +17,8 @@ RSpec.describe SurveysController, type: :controller do
 				race:'black',
 				age:'26',
 				email:nil,
-				faced_microagressions:"yes",
-				seen_microaggressions:"no",
+				faced_microaggressions:"Yes",
+				seen_microaggressions:"No",
 				industry:'Finance'
 			}
 			post :create, survey: survey
