@@ -14,7 +14,7 @@ RSpec.describe Survey, type: :model do
   		expect(survey.email).to be_a String
   	end
 
-    it 'should define surveys as invalid if survey isn\'t filled out properly' do 
+    it '.authenticate' do 
       expect(bad_survey.valid?).to be false
       bad_survey.zipcode = "42333"
       bad_survey.gender = "Male"
