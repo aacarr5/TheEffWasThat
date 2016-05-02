@@ -31,6 +31,6 @@
 		<%= f.label :seen_microaggressions, "Seen Microaggressions?" %>
 		<%= select("survey","seen_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
-		<%= f.submit "Submit" %>
+		<%= f.submit "Submit", class: "submitSurvey" %>
 	<% end %>
 </div>
