@@ -1,15 +1,20 @@
+.error {
+	text-align:center
+}
+
 .survey {
 	@include outer-container;
 	@include shift(2);
 	label {
 		text-align: center;
 		float:right;
-		@include span-columns(4 of 12);
+		@include span-columns(5 of 12);
 		margin-top: 20px;
+
 	}
 	input, select {
 		float:right;
-		@include span-columns(4);
+		@include span-columns(3);
 		margin-top: 20px; 
 	}
 	.submitSurvey {
