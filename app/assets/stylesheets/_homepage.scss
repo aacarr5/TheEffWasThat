@@ -1,7 +1,10 @@
 .indexBackground {
 	height: 100%;
 	width: 100%;
-	background-image: image-url('orange-office.jpg');
+	@include media(min-width $desktop) {
+		background-image: image-url('orange-office.jpg');
+	}
+	background-color: #eee;
 	background-size: cover;
 	@include filter(grayscale(0%) blur(0px));
 	position:absolute;
@@ -22,14 +25,14 @@
 	padding-bottom: 12px;
 	margin-top:20px;
 	color: $white;
-	@include media(max-width 480px) {
-		h1 {
-			font-size: 14px;
-		}
-		.introText {
-			font-size: 12px;
-		}
-	}
+	// @include media(max-width 480px) {
+	// 	h1 {
+	// 		font-size: 14px;
+	// 	}
+	// 	.introText {
+	// 		font-size: 12px;
+	// 	}
+	// }
 	border-radius:10px;
 	border: 5px solid $black;
 	.heroText{
