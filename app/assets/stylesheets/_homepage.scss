@@ -62,17 +62,3 @@
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
-
-.welcomeModal {
-	position:absolute;
-    background:url(tint20.png) 0 0 repeat;
-    background:rgba(0,0,0,0.2);
-    border-radius:14px;
-    padding:8px;
-}
-
-.welcomeModalContent {
-    border-radius:8px;
-    background:#fff;
-    padding:20px;
-}
