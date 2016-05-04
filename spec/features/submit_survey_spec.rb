@@ -28,7 +28,7 @@ describe 'survey submission', :type => :feature do
 		click_button 'Submit'
 
 		expect(page).to have_content 'Hm..something went wrong'
-		expect(find_field('Email').value).to eq('aacarr5@gmail.com')
+		expect(page).to have_selector("input[value='aacarr5@gmail.com']")
 	end
 
 

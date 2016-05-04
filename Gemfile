@@ -26,9 +26,11 @@ gem 'rspec-rails'
 
 gem 'bcrypt'
 
-
-# BOURBON
+# STYLESHEETS
 gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
 
 group :test do 
 	gem 'pry'
