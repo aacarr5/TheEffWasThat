@@ -3,28 +3,38 @@
 }
 
 .survey {
-	@include outer-container;
-	@include shift(2);
-	label {
-		text-align: center;
-		float:right;
-		@include span-columns(5 of 12);
-		margin-top: 20px;
-
-	}
+	margin:0 15px;
 	input, select {
-		float:right;
-		@include span-columns(3);
-		margin-top: 20px; 
+		border: 1px solid red;
+		box-shadow: 10px 10px 5px #888888;
 	}
-	.submitSurvey {
-		margin-top: 10px;
-		@include span-columns(8);
+	label {
+		text-align:center;
+		border: 1px solid green;
+		box-shadow: 1px 5px 2.5px #888888
 	}
+	@include media(769px) {
+		label {
+			@include span-columns(8)
+		}
+		input, select {
+			@include span-columns(3)
+		}
+	}
+}
+
+
+
+.simpleResponse {
+	@include span-columns(8);
 }
 
 .surveyHeader {	
 	background-color:red;
 	text-align:center;
+}
+
+.submitSurvey {
+	margin-left:35%;
 }
 

@@ -25,10 +25,10 @@
 		<%= f.label :email, "Email" %>	
 		<%= f.text_field :email %>
 
-		<%= f.label :faced_microaggressions, "Faced Microaggressions?" %>	
+		<%= f.label :faced_microaggressions, "Faced Microaggressions?", class: "simpleResponse" %>	
 		<%= select("survey","faced_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
-		<%= f.label :seen_microaggressions, "Seen Microaggressions?" %>
+		<%= f.label :seen_microaggressions, "Seen Microaggressions?", class: "simpleResponse" %>
 		<%= select("survey","seen_microaggressions", Survey::RESPONSES, {include_blank:true}) %>
 
 		<%= f.submit "Submit", class: "submitSurvey" %>
