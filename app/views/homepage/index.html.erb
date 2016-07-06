@@ -1,9 +1,25 @@
 <div class="indexBackground"></div>
-<div class="main">
-	<h1>Welcome to <span class="heroText">TheEffWasThat</span></h1>
-	<span class="introText">This is a website aimed at monitoring micro (and macro) aggressions within under-represented communities in the workplace.</span>
-	<div class="surveyButton">
-		<span class="surveyButtonText"> <%= link_to "Contribute", new_surveys_path%> </span> 
-	</div>
 
+<% if current_user %>
+	<h1 class="currentUser"> Welcome <%= current_user.email%></h1>
+	<h3>
+		<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+	</h3>
+<% end %>
+
+<div class="main">
+	<h1>Welcome to <span class="heroText">The Micro-aggression Monitor</span></h1>
+	<span class="introText">This is a website aimed at monitoring micro (and macro) aggressions within under-represented communities in the workplace.</span>
+	<% if !current_user %>
+		<div class="mainButton">
+			<span class="contribute"> <%= link_to "Contribute", new_surveys_path%> </span> 
+			<span class="login "> <%= link_to "Login", new_user_session_path %></span>
+		</div>
+	<% else %>
+		<div class="mainButton">
+			<span> Record a micro aggression!</span>
+		</div>
+	<% end %>	
 </div>
+
+503383
