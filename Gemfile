@@ -26,6 +26,8 @@ gem 'rspec-rails'
 
 gem 'bcrypt'
 
+gem 'pry'
+
 # STYLESHEETS
 gem 'bourbon'
 gem 'neat'

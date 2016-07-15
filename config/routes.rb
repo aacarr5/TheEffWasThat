@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   resource :surveys, only: [:index, :new, :create]
 
+  resource :microaggressions, only: [:new, :create, :index]
+
 end
