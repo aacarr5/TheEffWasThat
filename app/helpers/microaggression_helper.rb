@@ -1,0 +1,2 @@
+module MicroaggressionHelper
+end
